@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: 3em;
     }
     p{
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-weight: 300;
         font-size: 1.4em;
         line-height: 1.6;
