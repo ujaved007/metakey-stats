@@ -25,6 +25,7 @@ const ChartComponent = ({ data }) => {
 				captionFontColor: "#FFFFFF",
 				baseFont: "Montserrat",
 				baseFontSize: "0.9rem",
+				captionFontSize: "1.1rem",
 				baseFontColor: "#FFFFFF",
 				showLegend: 0,
 				use3DLighting: 1,
