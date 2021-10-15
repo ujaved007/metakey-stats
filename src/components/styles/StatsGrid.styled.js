@@ -15,6 +15,7 @@ export const StatsGrid = styled.div`
 	grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
 	justify-content: center;
 	justify-items: center;
+	align-items: end;
 	column-gap: 2rem;
 	grid-row-gap: 3rem;
 	overflow: hidden;
@@ -32,6 +33,9 @@ export const StatsGrid = styled.div`
 	p {
 		font-size: 1rem;
 		padding: 0px 10px 0 10px;
+	}
+	g .raphael-group-177-caption {
+		margin-right: 45px;
 	}
 `;
 

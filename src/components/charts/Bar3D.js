@@ -14,7 +14,7 @@ const ChartComponent = ({ data }) => {
 		dataFormat: "json",
 		dataSource: {
 			chart: {
-				caption: "Holder Distribution %",
+				caption: "HOLDER DISTRIBUTION %",
 				subCaption: "Calculated from (Unique Wallets/Total Supply) x 100",
 				useDataPlotColorForLabels: "1",
 				theme: "fusion",
@@ -22,6 +22,10 @@ const ChartComponent = ({ data }) => {
 				bgColor: "#000000",
 				captionFontColor: "#FFFFFF",
 				subCaptionFontColor: "#FFFFFF",
+				baseFont: "Montserrat",
+				baseFontSize: "0.9rem",
+				captionFontSize: "1.1rem",
+				baseFontColor: "#FFFFFF",
 				plotSpacePercent: "20%",
 				use3DLighting: 0,
 				formatNumberScale: 0,

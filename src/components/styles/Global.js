@@ -6,10 +6,6 @@ const GlobalStyles = createGlobalStyle`
         font-family: PP Monument Extended;
         src: Local("PP Monument Extended"), url(./fonts/PPMonumentExtended.otf) format('opentype')
     }
-    @font-face{
-        font-family: "Shapiro";
-        src: Local("Shapiro"), url(./fonts/ShapiroFeatherText.otf) format('opentype')
-    }
     body{
         background: #000000;
         color: #FFFFFF;

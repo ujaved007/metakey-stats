@@ -10,7 +10,7 @@ const ChartComponent = ({ data }) => {
 	const chartConfigs = {
 		type: "pie3d",
 		width: "100%",
-		height: 500,
+		height: 400,
 		dataFormat: "json",
 		dataSource: {
 			chart: {
@@ -23,6 +23,9 @@ const ChartComponent = ({ data }) => {
 				paletteColors: "#F5BA2E, #F47A22, #8525D0, #50D084, #F4045A",
 				bgColor: "#000000",
 				captionFontColor: "#FFFFFF",
+				baseFont: "Montserrat",
+				baseFontSize: "0.9rem",
+				baseFontColor: "#FFFFFF",
 				showLegend: 0,
 				use3DLighting: 1,
 				formatNumberScale: 0,
