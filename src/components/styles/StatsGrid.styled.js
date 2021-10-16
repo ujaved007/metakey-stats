@@ -22,11 +22,14 @@ export const StatsGrid = styled.div`
 
 	@media only screen and (max-width: 580px) {
 		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		p {
+			font-size: 0.8rem;
+		}
 	}
 
 	p {
 		font-size: 1rem;
-		margin: 0px 30px 40px 10px;
+		margin: 0px 30px 40px 30px;
 		max-width: 60ch;
 	}
 `;
@@ -45,4 +48,30 @@ export const ChartWrapper = styled.div`
 	/* margin: 0 auto; */
 	background-color: #191919;
 	border-radius: 20px;
+	.bar-chart {
+		padding-left: 20px;
+	}
+`;
+
+export const PieChartWrapper = styled(ChartWrapper)`
+	@media only screen and (max-width: 1119px) {
+		align-items: flex-end;
+		.pie-chart {
+			width: 90% !important;
+		}
+		article {
+			width: 90%;
+		}
+	}
+	@media only screen and (max-width: 589px) {
+		align-items: center;
+		.pie-chart {
+			width: 100% !important;
+			height: 16rem !important;
+		}
+		article {
+			width: 100%;
+			height: 16rem;
+		}
+	}
 `;

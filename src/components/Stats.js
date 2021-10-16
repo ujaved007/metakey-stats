@@ -4,7 +4,12 @@ import { useMeasure } from "../custom-hooks/useMeasure";
 import { Column2d, Pie2d, Bar2d } from "./charts/ChartOptions";
 import Chart from "react-google-charts";
 import { dataWallets, dataDistribution, dataWalletsPercent } from "./data/data";
-import { StatsGrid, Wrapper, ChartWrapper } from "./styles/StatsGrid.styled";
+import {
+	StatsGrid,
+	Wrapper,
+	ChartWrapper,
+	PieChartWrapper,
+} from "./styles/StatsGrid.styled";
 
 const Stats = () => {
 	//Total holders calculation for column graph
@@ -27,7 +32,7 @@ const Stats = () => {
 						/>
 					</article>
 				</ChartWrapper>
-				<ChartWrapper>
+				<PieChartWrapper>
 					<article>
 						<Chart
 							width={"100%"}
@@ -36,9 +41,10 @@ const Stats = () => {
 							loader={<div>Loading Chart</div>}
 							data={dataWalletsPercent}
 							options={Pie2d}
+							className="pie-chart"
 						/>
 					</article>
-				</ChartWrapper>
+				</PieChartWrapper>
 				<ChartWrapper>
 					<article>
 						<Chart
@@ -48,6 +54,7 @@ const Stats = () => {
 							loader={<div>Loading Chart</div>}
 							data={dataDistribution}
 							options={Bar2d}
+							className="bar-chart"
 						/>
 						<p>
 							Higher the Holder distribution %, the higher the “intent to hold”
