@@ -1,6 +1,4 @@
 import React from "react";
-import { useRef, useState, useLayoutEffect } from "react";
-import { useMeasure } from "../custom-hooks/useMeasure";
 import { Column2d, Pie2d, Bar2d } from "./charts/ChartOptions";
 import Chart from "react-google-charts";
 import { dataWallets, dataDistribution, dataWalletsPercent } from "./data/data";

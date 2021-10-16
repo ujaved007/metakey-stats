@@ -50,7 +50,7 @@ export const Pie2d = {
 	backgroundColor: "none",
 	titleColor: "#FFFFFF",
 	pieSliceBorderColor: "transparent",
-	pieSliceText: "label",
+	pieSliceText: "none",
 	hAxis: {
 		textStyle: { color: "#FFFFFF" },
 		gridlines: { color: "none", count: 8 },
