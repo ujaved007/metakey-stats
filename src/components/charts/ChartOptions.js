@@ -7,6 +7,15 @@ export const Column2d = {
 		duration: 1000,
 		easing: "out",
 	},
+	annotations: {
+		alwaysOutside: true,
+		textStyle: {
+			color: "#FFFFFF",
+		},
+		stem: {
+			color: "transparent",
+		},
+	},
 	colors: ["#53D98A"],
 	backgroundColor: "none",
 	titleColor: "#FFFFFF",
@@ -24,8 +33,8 @@ export const Column2d = {
 };
 
 export const Pie2d = {
-	title: "UNIQUE HOLDER WALLETS",
-	chartArea: { width: "70%" },
+	title: "UNIQUE HOLDER WALLETS PERCENT",
+	chartArea: { width: "80%" },
 	legend: {
 		position: "labeled",
 		alignment: "start",
@@ -41,7 +50,7 @@ export const Pie2d = {
 	backgroundColor: "none",
 	titleColor: "#FFFFFF",
 	pieSliceBorderColor: "transparent",
-	pieSliceText: "none",
+	pieSliceText: "label",
 	hAxis: {
 		textStyle: { color: "#FFFFFF" },
 		gridlines: { color: "none", count: 8 },
@@ -66,7 +75,15 @@ export const Bar2d = {
 	backgroundColor: "none",
 	titleColor: "#FFFFFF",
 	labelColor: "#FFFFFF",
-
+	annotations: {
+		alwaysOutside: true,
+		textStyle: {
+			color: "#FFFFFF",
+		},
+		stem: {
+			color: "transparent",
+		},
+	},
 	hAxis: {
 		textStyle: { color: "#FFFFFF" },
 		gridlines: { color: "none", count: 8 },

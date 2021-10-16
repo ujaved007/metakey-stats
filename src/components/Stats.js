@@ -1,14 +1,16 @@
 import React from "react";
+import { useRef, useState, useLayoutEffect } from "react";
+import { useMeasure } from "../custom-hooks/useMeasure";
 import { Column2d, Pie2d, Bar2d } from "./charts/ChartOptions";
 import Chart from "react-google-charts";
-import { dataWallets, dataDistribution } from "./data/data";
+import { dataWallets, dataDistribution, dataWalletsPercent } from "./data/data";
 import { StatsGrid, Wrapper, ChartWrapper } from "./styles/StatsGrid.styled";
 
 const Stats = () => {
 	//Total holders calculation for column graph
-	const newArr = dataWallets.flat().filter((val) => typeof val == "number");
-	const total = newArr.reduce((a, b) => a + b);
-	const uniqueHolders = [...dataWallets, ["Total Holders", total]];
+	// const newArr = dataWallets.flat().filter((val) => typeof val == "number");
+	// const total = newArr.reduce((a, b) => a + b);
+	// const uniqueHolders = [...dataWallets, ["Total Holders", total]];
 
 	return (
 		<Wrapper>
@@ -20,7 +22,7 @@ const Stats = () => {
 							height={"25rem"}
 							chartType="ColumnChart"
 							loader={<div>Loading Chart</div>}
-							data={uniqueHolders}
+							data={dataWallets}
 							options={Column2d}
 						/>
 					</article>
@@ -32,7 +34,7 @@ const Stats = () => {
 							height={"25rem"}
 							chartType="PieChart"
 							loader={<div>Loading Chart</div>}
-							data={dataWallets}
+							data={dataWalletsPercent}
 							options={Pie2d}
 						/>
 					</article>

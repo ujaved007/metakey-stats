@@ -20,23 +20,14 @@ export const StatsGrid = styled.div`
 	grid-row-gap: 3rem;
 	overflow: hidden;
 
-	@media only screen and (max-width: 570px) {
-		grid-template-columns: 1fr;
-		grid-row-gap: 0rem;
+	@media only screen and (max-width: 580px) {
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 	}
-	.fusioncharts-container {
-		width: 100% !important;
-	}
-	svg {
-		width: 100% !important;
-	}
+
 	p {
 		font-size: 1rem;
 		margin: 0px 30px 40px 10px;
 		max-width: 60ch;
-	}
-	g .raphael-group-177-caption {
-		margin-right: 45px;
 	}
 `;
 
@@ -47,7 +38,6 @@ export const ChartWrapper = styled.div`
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		margin-left: 2.5rem;
 	}
 	display: flex;
 	flex-direction: column;
