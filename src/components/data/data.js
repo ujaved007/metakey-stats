@@ -1,40 +1,15 @@
 export const dataWallets = [
-	{
-		label: "Edition 1",
-		value: 440,
-	},
-	{
-		label: "Edition 2",
-		value: 689,
-	},
-	{
-		label: "Edition 3",
-		value: 905,
-	},
-	{
-		label: "Edition 4",
-		value: 3595,
-	},
-	{
-		label: "Keymasters",
-		value: 241,
-	},
+	["Editions", "Unique Wallets"],
+	["Edition 1", 440],
+	["Edition 2", 689],
+	["Edition 3", 905],
+	["Edition 4", 3595],
+	["Keymasters", 241],
 ];
 export const dataDistribution = [
-	{
-		label: "Edition 1",
-		value: 88,
-	},
-	{
-		label: "Edition 2",
-		value: 92,
-	},
-	{
-		label: "Edition 3",
-		value: 91,
-	},
-	{
-		label: "Edition 4",
-		value: 48,
-	},
+	["Editions", "Holder Distributions"],
+	["Edition 1", 88],
+	["Edition 2", 92],
+	["Edition 3", 91],
+	["Edition 4", 48],
 ];

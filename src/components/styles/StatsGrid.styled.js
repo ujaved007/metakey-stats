@@ -12,11 +12,11 @@ export const StatsGrid = styled.div`
 	margin-top: 70px;
 	margin-bottom: 100px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	justify-content: center;
 	justify-items: center;
 	align-items: end;
-	column-gap: 2rem;
+	column-gap: 3rem;
 	grid-row-gap: 3rem;
 	overflow: hidden;
 
@@ -32,7 +32,8 @@ export const StatsGrid = styled.div`
 	}
 	p {
 		font-size: 1rem;
-		padding: 0px 10px 0 10px;
+		margin: 0px 30px 40px 10px;
+		max-width: 60ch;
 	}
 	g .raphael-group-177-caption {
 		margin-right: 45px;
@@ -40,8 +41,18 @@ export const StatsGrid = styled.div`
 `;
 
 export const ChartWrapper = styled.div`
-	max-width: 40rem;
-	@media only screen and (max-width: 480px) {
-		max-width: 30rem;
-	} ;
+	width: 100%;
+	height: 100%;
+	article {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin-left: 2.5rem;
+	}
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* margin: 0 auto; */
+	background-color: #191919;
+	border-radius: 20px;
 `;

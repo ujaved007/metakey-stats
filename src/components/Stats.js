@@ -1,36 +1,59 @@
 import React from "react";
-import { Pie3D, Bar3D, Column3D } from "./charts/index";
+import { Column2d, Pie2d, Bar2d } from "./charts/ChartOptions";
+import Chart from "react-google-charts";
 import { dataWallets, dataDistribution } from "./data/data";
 import { StatsGrid, Wrapper, ChartWrapper } from "./styles/StatsGrid.styled";
 
 const Stats = () => {
-	const allHolders = dataWallets.reduce((prev, curr) => {
-		return { label: "All Holders", value: prev.value + curr.value };
-	});
-	const uniqueHolders = [...dataWallets, allHolders];
+	//Total holders calculation for column graph
+	const newArr = dataWallets.flat().filter((val) => typeof val == "number");
+	const total = newArr.reduce((a, b) => a + b);
+	const uniqueHolders = [...dataWallets, ["Total Holders", total]];
+
 	return (
 		<Wrapper>
 			<StatsGrid>
 				<ChartWrapper>
-					<div>
-						<Column3D data={uniqueHolders} />
-					</div>
+					<article>
+						<Chart
+							width={"100%"}
+							height={"25rem"}
+							chartType="ColumnChart"
+							loader={<div>Loading Chart</div>}
+							data={uniqueHolders}
+							options={Column2d}
+						/>
+					</article>
 				</ChartWrapper>
 				<ChartWrapper>
-					<div>
-						<Pie3D data={dataWallets} />
-					</div>
+					<article>
+						<Chart
+							width={"100%"}
+							height={"25rem"}
+							chartType="PieChart"
+							loader={<div>Loading Chart</div>}
+							data={dataWallets}
+							options={Pie2d}
+						/>
+					</article>
 				</ChartWrapper>
 				<ChartWrapper>
-					<div>
-						<Bar3D data={dataDistribution} />
+					<article>
+						<Chart
+							width={"100%"}
+							height={"25rem"}
+							chartType="BarChart"
+							loader={<div>Loading Chart</div>}
+							data={dataDistribution}
+							options={Bar2d}
+						/>
 						<p>
 							Higher the Holder distribution %, the higher the “intent to hold”
 							of the edition as there’s less people with multiples they’ll
 							likely sell. (Eg, 100% distribution means each key is owned by
 							only 1 person/wallet).
 						</p>
-					</div>
+					</article>
 				</ChartWrapper>
 			</StatsGrid>
 		</Wrapper>
