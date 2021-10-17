@@ -1,5 +1,5 @@
 export const Column2d = {
-	title: "UNIQUE HOLDER WALLETS",
+	// title: "UNIQUE HOLDER WALLETS",
 	chartArea: { width: "75%" },
 	legend: { position: "none" },
 	animation: {
@@ -33,7 +33,7 @@ export const Column2d = {
 };
 
 export const Pie2d = {
-	title: "UNIQUE HOLDER WALLETS PERCENT",
+	// title: "UNIQUE HOLDER WALLETS PERCENT",
 	chartArea: { width: "80%" },
 	legend: {
 		position: "labeled",
@@ -63,7 +63,7 @@ export const Pie2d = {
 };
 
 export const Bar2d = {
-	title: "UNIQUE HOLDER WALLETS",
+	// title: "Holder Distribution %",
 	chartArea: { width: "75%" },
 	legend: { position: "none" },
 	animation: {

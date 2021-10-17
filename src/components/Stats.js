@@ -7,6 +7,10 @@ import {
 	Wrapper,
 	ChartWrapper,
 	PieChartWrapper,
+	ChartTitle,
+	ChartCaption,
+	ChartDesc,
+	PaddingBottom,
 } from "./styles/StatsGrid.styled";
 
 const Stats = () => {
@@ -27,7 +31,10 @@ const Stats = () => {
 							loader={<div>Loading Chart</div>}
 							data={dataWallets}
 							options={Column2d}
+							className="column-chart"
 						/>
+						<ChartTitle>UNIQUE HOLDER WALLETS</ChartTitle>
+						<PaddingBottom />
 					</article>
 				</ChartWrapper>
 				<PieChartWrapper>
@@ -41,6 +48,8 @@ const Stats = () => {
 							options={Pie2d}
 							className="pie-chart"
 						/>
+						<ChartTitle>UNIQUE HOLDER WALLETS PERCENT</ChartTitle>
+						<PaddingBottom />
 					</article>
 				</PieChartWrapper>
 				<ChartWrapper>
@@ -54,12 +63,16 @@ const Stats = () => {
 							options={Bar2d}
 							className="bar-chart"
 						/>
-						<p>
+						<ChartTitle>Holder Distribution %</ChartTitle>
+						<ChartCaption>
+							Calculated from (Unique Wallets/Total Supply) x 100
+						</ChartCaption>
+						<ChartDesc>
 							Higher the Holder distribution %, the higher the “intent to hold”
 							of the edition as there’s less people with multiples they’ll
 							likely sell. (Eg, 100% distribution means each key is owned by
 							only 1 person/wallet).
-						</p>
+						</ChartDesc>
 					</article>
 				</ChartWrapper>
 			</StatsGrid>
