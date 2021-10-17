@@ -14,11 +14,6 @@ import {
 } from "./styles/StatsGrid.styled";
 
 const Stats = () => {
-	//Total holders calculation for column graph
-	// const newArr = dataWallets.flat().filter((val) => typeof val == "number");
-	// const total = newArr.reduce((a, b) => a + b);
-	// const uniqueHolders = [...dataWallets, ["Total Holders", total]];
-
 	return (
 		<Wrapper>
 			<StatsGrid>
